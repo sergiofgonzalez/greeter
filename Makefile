@@ -8,7 +8,7 @@ clean:
 	rm .*.out
 
 run:
-	go run .
+	go run cmd/greeter/main.go
 
 test:
 	go test ./...
@@ -22,4 +22,4 @@ coverhtml:
 	${PATH_TO_CHROME} file://${WSL_PATH_PREFIX}${PWD}/.coverage.html &
 
 build:
-	go build -o bin/
+	go build -o bin/ cmd/greeter/main.go
